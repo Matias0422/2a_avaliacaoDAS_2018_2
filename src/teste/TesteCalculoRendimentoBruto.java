@@ -14,7 +14,7 @@ public class TesteCalculoRendimentoBruto {
 		float p = 1000f;
 		float i = 8.5f;
 		
-		assertEquals(13.97f, Calculadora.calculoRendimentoBruto(n,p,i),0f);
+		assertEquals(13.972603f, Calculadora.calculoRendimentoBruto(n,p,i),0f);
 	}
 	
 	@Test
@@ -23,7 +23,7 @@ public class TesteCalculoRendimentoBruto {
 		float p = 500f;
 		float i = 8.0f;
 		
-		assertEquals(13.15f, Calculadora.calculoRendimentoBruto(n,p,i),0f);
+		assertEquals(13.150684f, Calculadora.calculoRendimentoBruto(n,p,i),0f);
 	}
 
 }

@@ -10,20 +10,23 @@ public class TesteCalculoImposto {
 
 	@Test
 	public void test() {
-
+		int n = 60;
 		float p = 1000f;
 		float ir = 22.5f;
-		
-		assertEquals(3.14f, Calculadora.calculoImposto(p,ir),0f);
+		float i = 8.5f;
+		float bruto = Calculadora.calculoRendimentoBruto(n,p,i);
+		assertEquals(3.1438355f, Calculadora.calculoImposto(bruto,ir),0f);
 	}
 	
 	@Test
 	public void test2() {
-
+		int n = 120;
 		float p = 500f;
 		float ir = 22.5f;
+		float i = 8.0f;
 		
-		assertEquals(2.96f, Calculadora.calculoImposto(p,ir),0f);
+		float bruto = Calculadora.calculoRendimentoBruto(n,p,i);
+		assertEquals(2.9589038f, Calculadora.calculoImposto(bruto,ir),0f);
 	}
 
 }

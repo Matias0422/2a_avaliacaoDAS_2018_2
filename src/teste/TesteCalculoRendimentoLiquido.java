@@ -13,9 +13,13 @@ public class TesteCalculoRendimentoLiquido {
 		int n = 60;
 		float p = 1000f;
 		float i = 8.5f;
+		float ir = 22.5f;
+		
+		
 		
 		float rendimentoBruto = Calculadora.calculoRendimentoBruto(n,p,i);
-		assertEquals(1.0829f, Calculadora.calculoRendimentoLiquido(rendimentoBruto, p),0f);
+		float imposto = Calculadora.calculoImposto(rendimentoBruto,ir);
+		assertEquals(1.0828705f, Calculadora.calculoRendimentoLiquido(rendimentoBruto, p, imposto),0f);
 	}
 	
 	@Test
@@ -23,9 +27,12 @@ public class TesteCalculoRendimentoLiquido {
 		int n = 120;
 		float p = 500f;
 		float i = 8.0f;
+		float ir = 22.5f;
+		
 		
 		float rendimentoBruto = Calculadora.calculoRendimentoBruto(n,p,i);
-		assertEquals(2.0384f, Calculadora.calculoRendimentoLiquido(rendimentoBruto, p),0f);
+		float imposto = Calculadora.calculoImposto(rendimentoBruto,ir);
+		assertEquals(2.0383606f, Calculadora.calculoRendimentoLiquido(rendimentoBruto, p, imposto),0f);
 	}
 
 }
