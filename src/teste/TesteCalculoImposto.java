@@ -16,5 +16,14 @@ public class TesteCalculoImposto {
 		
 		assertEquals(3.14f, Calculadora.calculoImposto(p,ir),0f);
 	}
+	
+	@Test
+	public void test2() {
+
+		float p = 500f;
+		float ir = 22.5f;
+		
+		assertEquals(2.96f, Calculadora.calculoImposto(p,ir),0f);
+	}
 
 }

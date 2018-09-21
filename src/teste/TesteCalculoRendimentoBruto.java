@@ -16,5 +16,14 @@ public class TesteCalculoRendimentoBruto {
 		
 		assertEquals(13.97f, Calculadora.calculoRendimentoBruto(n,p,i),0f);
 	}
+	
+	@Test
+	public void test2() {
+		int n = 120;
+		float p = 500f;
+		float i = 8.0f;
+		
+		assertEquals(13.15f, Calculadora.calculoRendimentoBruto(n,p,i),0f);
+	}
 
 }
